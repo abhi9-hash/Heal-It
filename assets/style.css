@@ -129,7 +129,6 @@ section{
     font-size: 17px;
   }
   
-  /* Change the color of links on hover */
   .items-container a:hover{
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -140,9 +139,6 @@ section{
     color: rgba(3, 3, 3, 0.733);
   }
   
-  /* Add an active class to highlight the current page */
-  
-  /* Hide the link that should open and close the.items-container on small screens */
   .items-container .icon {
     display: none;
   }
@@ -234,6 +230,11 @@ form{
     font-size: 3rem;
     font-weight: 600;
     
+}
+
+.intro-para{
+    margin-top: 2rem;
+    max-width: 60%;
 }
 
 .button{
@@ -425,7 +426,7 @@ a{
     z-index: 1;
     width: 90vw;
     margin: 5vh auto;
-    height: 30rem;
+    min-height: 30rem;
     
 }
  .carousel-item-hidden,.carousel-item{
@@ -436,6 +437,9 @@ a{
     border: 1px solid rgba(255, 255, 255, 0.363);
     animation:fadeit 1s;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     padding: 1rem;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 10%);
     min-height: 25rem;
@@ -447,8 +451,54 @@ a{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    color: blanchedalmond;
 
 }
+
+.carousel-heading{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+.carousel-body{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.body-img1{
+    background-image: url('./img/image1.jpeg');
+}
+
+.body-img2{
+    background-image: url('./img/image2.jpeg');
+}
+
+.body-img3{
+    background-image: url('./img/image3.jpeg');
+}
+.body-image{
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:40%;
+    height: 15rem;
+    margin-right: 5%;
+}
+
+.body-info{
+    width: 55%;
+    font-size: 1.25rem;
+    height: 15rem;
+    overflow-y: scroll;
+}
+
+.body-info::-webkit-scrollbar-track{
+    display: none;
+}
+
 @keyframes fadeit{
     0%{
         opacity: 0;
@@ -458,6 +508,22 @@ a{
         transform: opacity linear;
     }
     
+}
+
+.item-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:40%;
+}
+
+.item-img img{
+    max-width:15rem;
+}
+
+.item-description{
+    width: 60%;
 }
 
 .controls{
@@ -514,7 +580,7 @@ a{
     width: 98%;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 1%;
+    padding: 1rem 1%;
     overflow: hidden;
 }
 .Answer{
@@ -766,6 +832,25 @@ select:focus
     .img2{
         margin-left:30% ;
     }
+    .carousel-heading{
+        font-size: 1.25rem;
+    }
+    .carousel-item-visible, .carousel{
+        justify-content: unset;
+    }
+    .carousel-body{
+        flex-direction: column;
+    }
+    .body-image{
+        width: 100%;
+        margin: 1rem;
+        height: 12.5rem;
+    }
+    .body-info{
+        width: 100%;
+        height: 10rem;
+        font-size: 1rem;
+    }
   }
   @media screen and (max-width: 600px) {
     .heading,.intro-heading{
@@ -773,6 +858,9 @@ select:focus
     }
     .header-text span,.brand{
         font-size: 1.5rem;
+    }
+    .intro-para{
+        max-width: 80%;
     }
     .dropdown>div{
         width: 90vw;
