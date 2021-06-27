@@ -362,7 +362,9 @@ a{
       color: rgba( 255, 255, 255, 0.25 ); ;
   }
   .info-card img{
-      max-height: 60%;
+      width: 70%;
+      height: auto;
+      margin: auto auto;
       margin-top:-4rem;
       z-index: 1;
       position: relative;
