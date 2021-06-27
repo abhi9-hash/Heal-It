@@ -367,7 +367,7 @@ a{
       margin: auto auto;
       margin-top:-4rem;
       z-index: 1;
-      position: relative;
+      position: static;
   }
 .cards-container{
     padding: 6vh 6vw;
